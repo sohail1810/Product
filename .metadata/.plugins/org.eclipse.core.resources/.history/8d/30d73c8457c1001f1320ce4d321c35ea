@@ -1,0 +1,30 @@
+package com.sathya.springMVC3.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.ui.Model;
+
+import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+
+@org.springframework.stereotype.Service
+
+@Getter
+public class Service 
+{
+	@Autowired
+	Repository repository;
+	public void saveStudentDetails(Model model)
+	{
+		Entity entity=new Entity();
+		entity.setName(model.getName());
+		entity.setDept(model.getDept());
+		entity.setGender(model.getGender());
+		entity.setAge(model.getAge());
+		entity.setSchool(model.getSchool());
+		repository.save(entity);
+	}
+	
+
+}

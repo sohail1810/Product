@@ -1,0 +1,8 @@
+package com.sathya.springMVC2.EmpRepository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class EmpRepository {
+
+}

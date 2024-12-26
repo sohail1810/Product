@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        input[type="number"]:focus,
+        input[type="text"]:focus {
+            border-color: #0066cc;
+            outline: none;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #0066cc;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004a99;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .form-footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Edit Product</h1>
+        <form action="/editProduct" method="POST">
+        
+        <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter the name name">
+            </div>
+        
+            <div class="form-group">
+                <label for="brand">Brand:</label>
+                <input type="text" id="brand" name="brand" required placeholder="Enter the brand name">
+            </div>
+
+            <div class="form-group">
+                <label for="madeIn">Made In:</label>
+                <input type="text" id="madeIn" name="madeIn" required placeholder="Enter country of origin">
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price ($):</label>
+                <input type="number" id="price" name="price" required placeholder="Enter the price" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required placeholder="Enter available quantity">
+            </div>
+
+            <div class="form-group">
+                <label for="discountRate">Discount Rate (%):</label>
+                <input type="number" id="discountRate" name="discountRate" required placeholder="Enter discount rate" min="0" max="100" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="taxRate">Tax Rate (%):</label>
+                <input type="number" id="taxRate" name="taxRate" required placeholder="Enter tax rate" min="0" max="100" step="0.01">
+            </div>
+
+            <input type="submit" value="Save Changes">
+        </form>
+        <div class="form-footer">
+            <p>Need help? <a href="#">Contact Support</a></p>
+        </div>
+    </div>
+</body>
+</html>

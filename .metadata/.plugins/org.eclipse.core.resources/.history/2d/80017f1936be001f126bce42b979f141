@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+</head>
+<body>
+
+    <h2 style="color:blue;" >Employee Information Form</h2>
+
+    <form action="/saveEmployee" method="POST">
+        <!-- Employee ID -->
+        <label for="empid">Emp ID:</label>
+        <input type="text" id="emp_id" name="empId" required><br><br>
+
+        <!-- Employee Name -->
+        <label for="empname">Emp Name:</label>
+        <input type="text" id="emp_name" name="empName" required><br><br>
+
+        <!-- Employee Department -->
+        <label for="empdept">Emp Dept:</label>
+        <input type="text" id="emp_dept" name="empDept" required><br><br>
+
+        <!-- Employee Salary -->
+        <label for="empsalary">Emp Sal:</label>
+        <input type="number" id="emp_salary" name="empSal" required><br><br>
+
+        <!-- Employee Company -->
+        <label for="empcompany">Emp Comp:</label>
+        <input type="text" id="emp_company" name="empComp" required><br><br>
+        
+        <label for="empBonus">Emp Bonus:</label>
+        <input type="text" id="empBonus" name="empBonus" required><br><br>
+        
+        <label for="empDa">Emp DA:</label>
+        <input type="text" id="empDa" name="empDa" required><br><br>
+        
+        <label for="empHra">Emp HRa:</label>
+        <input type="text" id="empHra" name="empHra" required><br><br>
+        
+        <label for="empPf">Emp PF:</label>
+        <input type="text" id="empPf" name="empPf" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Product Company</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+        <p>Have questions about our products? We're here to help! Reach out to us and we'll get back to you as soon as possible.</p>
+    </header>
+
+    <section id="contact-details">
+        <h2>Our Contact Information:</h2>
+        <p><strong>Customer Support:</strong> +1 (555) 987-6543</p>
+        <p><strong>Sales Inquiries:</strong> sales@exampleproduct.com</p>
+        <p><strong>General Inquiries:</strong> support@exampleproduct.com</p>
+        
+        <h3>Our Office:</h3>
+        <p>123 Product Lane, Suite 200<br>City, State, ZIP Code</p>
+        
+        <h3>Follow Us:</h3>
+        <p><a href="https://www.facebook.com/exampleproduct" target="_blank">Facebook</a></p>
+        <p><a href="https://twitter.com/exampleproduct" target="_blank">Twitter</a></p>
+        <p><a href="https://www.instagram.com/exampleproduct" target="_blank">Instagram</a></p>
+        <p><a href="https://www.linkedin.com/company/exampleproduct" target="_blank">LinkedIn</a></p>
+    </section>
+
+    <section id="contact-form">
+        <h2>Contact Us</h2>
+        <p>If you have questions about a specific product, need support, or want to get in touch, fill out the form below:</p>
+        <form action="/submit-form" method="POST">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number (Optional):</label><br>
+            <input type="text" id="phone" name="phone"><br><br>
+
+            <label for="subject">Subject:</label><br>
+            <select id="subject" name="subject" required>
+                <option value="Product Inquiry">Product Inquiry</option>
+                <option value="Support Request">Support Request</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Example Product Company. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+</body>
+</html>

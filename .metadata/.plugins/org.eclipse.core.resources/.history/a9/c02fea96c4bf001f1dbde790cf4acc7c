@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details Submitted Successfully</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Centering the content in the viewport */
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">
+            <!-- You can use an emoji or a font-awesome icon for success -->
+            &#x1F44D; <!-- Thumbs Up Emoji -->
+        </div>
+       
+        <p>Your product details have been successfully submitted. Thank you for your submission.</p>
+        <a href="/products" class="button">Back to Product List</a>
+    </div>
+
+</body>
+</html>

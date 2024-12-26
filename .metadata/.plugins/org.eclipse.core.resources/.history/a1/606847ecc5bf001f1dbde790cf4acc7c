@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search for a Product</title>
+    <style>
+        /* Basic reset for padding and margin */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa; /* Light blue background color for the whole page */
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Container for the form and product details */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="number"] {
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4CAF50;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Product details section */
+        .product-details {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .product-details strong {
+            color: #333;
+        }
+
+        /* No product found message */
+        .no-product {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            input[type="number"], button[type="submit"] {
+                font-size: 1rem;
+                padding: 10px;
+         

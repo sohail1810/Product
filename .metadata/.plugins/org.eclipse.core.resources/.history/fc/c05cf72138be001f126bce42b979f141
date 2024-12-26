@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details Form</title>
+    <link rel="stylesheet" href="styles.css">
+  
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Details Form</h1>
+        <form action="/saveEmployee" method="POST">
+            <label for="empName">Employee Name:</label>
+            <input type="text" id="empName" name="empName" required><br><br>
+
+            <label for="empDept">Department:</label>
+            <input type="text" id="empDept" name="empDept" required><br><br>
+
+            <label for="empSalary">Salary:</label>
+            <input type="number" id="empSalary" name="empSal" required><br><br>
+
+            <label for="empCompany">Company:</label>
+            <input type="text" id="empCompany" name="empComp" required><br><br>
+
+            <label for="empBonus">Bonus:</label>
+            <input type="number" id="empBonus" name="empBonus" required><br><br>
+
+            <label for="empDA">Dearness Allowance (DA):</label>
+            <input type="number" id="empDA" name="empDa" required><br><br>
+
+            <label for="empHRA">House Rent Allowance (HRA):</label>
+            <input type="number" id="empHRA" name="empHra" required><br><br>
+
+            <label for="empPF">Provident Fund (PF):</label>
+            <input type="number" id="empPF" name="empPf" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

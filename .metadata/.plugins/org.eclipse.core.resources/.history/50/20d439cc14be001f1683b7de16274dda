@@ -1,0 +1,18 @@
+package com.sathya.springMVC.ProductModel;
+
+public class ProductModel {
+	private String name;
+	private String brand;
+	private String madeIn;
+	private double price;
+	private int  quantity;
+	private double discountRate;
+	private double taxRate;
+	public String getProductModel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	}
+
+

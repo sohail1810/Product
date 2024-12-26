@@ -1,0 +1,5 @@
+package com.sathya.springMVC3.Repository;
+
+public interface Repository {
+
+}

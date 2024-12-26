@@ -1,0 +1,5 @@
+package com.sathya.springMVC2.Service;
+
+public class EmpService {
+
+}

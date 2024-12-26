@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search for an Employee</title>
+    <style>
+        /* Basic reset for padding and margin */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Container for the form and employee details */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="number"] {
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4CAF50;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Employee details section */
+        .employee-details {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .employee-details p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .employee-details strong {
+            color: #333;
+        }
+
+        /* No employee found message */
+        .no-employee {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            input[type="number"], button[type="submit"] {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Search For an Employee</h2>
+        <form th:action="@{/searchbyempid}" method="post">
+            <label for="id">Enter Employee ID:</label>
+            <input type="number" name="empId" id="id" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Employee details section -->
+        <div th:if="${employee != null}" class="employee-details">
+            <h3>Employee Details</h3>
+            <p><strong>ID:</strong> <span th:text="${emp.id}"></span></p>
+            <p><strong>Name:</strong> <span th:text="${emp.empName}"></span></p>
+            <p><strong>Department:</strong> <span th:text="${emp.empDept}"></span></p>
+            <p><strong>Salary:</strong> <span th:text="${emp.empSal}"></span></p>
+            <p><strong>Bonus:</strong> <span th:text="${emp.empBonus}"></span></p>
+            <p><strong>DA:</strong> <span th:text="${emp.empDa}"></span></p>
+            <p><strong>HRA:</strong> <span th:text="${emp.empHra}"></span></p>
+            <p><strong>Company:</strong> <span th:text="${emp.empComp}"></span></p>
+            <p><strong>Bonus Amount:</strong> <span th:text="${emp.bonusAmount}"></span></p>
+            <p><strong>DA Amount:</strong> <span th:text="${emp.daAmount}"></span></p>
+            <p><strong>HRA Amount:</strong> <span th:text="${emp.hraAmount}"></span></p>
+            <p><strong>Total Salary:</strong> <span th:text="${emp.totalSal}"></span></p>
+        </div>
+
+        <!-- No employee found message -->
+        <div th:if="${employee == null}" class="no-employee">
+            <p>No Employee Found with the Given ID.</p>
+        </div>
+    </div>
+
+</body>
+</html>

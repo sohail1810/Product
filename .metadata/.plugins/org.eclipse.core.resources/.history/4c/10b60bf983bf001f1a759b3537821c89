@@ -1,0 +1,26 @@
+package com.sathya.springMVC2.EmpModel;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class EmpModel {
+	
+	private String name;
+	private String dept;
+	private double sal;
+	private String comp;
+	private double bonus;
+	private double da;
+	private double hra;
+	private double pf;
+	
+
+}

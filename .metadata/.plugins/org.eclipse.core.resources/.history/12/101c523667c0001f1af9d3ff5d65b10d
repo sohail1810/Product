@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+    <style>
+        /* Basic reset for padding and margin */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Container for the employee list */
+        .container {
+            max-width: 1500px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        /* Styling the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        td a {
+            color: #d9534f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            color: #c9302c;
+        }
+
+        /* Hover effect for rows */
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            table, th, td {
+                font-size: 0.9rem;
+            }
+
+            td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Employee List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Employee Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Bonus</th>
+                    <th>DA</th>
+                    <th>HRA</th>
+                    <th>Company</th>
+                    <th>Bonus Amount</th>
+                    <th>DA Amount</th>
+                    <th>HRA Amount</th>
+                    <th>Total Salary</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employees : ${employees}">
+                    <td th:text="${employees.empId}"></td>
+                    <td th:text="${employees.empName}"></td>
+                    <td th:text="${employees.empDept}"></td>
+                    <td th:text="${employees.empSal}"></td>
+                    <td th:text="${employees.empBonus}"></td>
+                    <td th:text="${employees.empDa}"></td>
+                    <td th:text="${employees.empHra}"></td>
+                    <td th:text="${employees.empComp}"></td>
+                    <td th:text="${employees.bonusAmount}"></td>
+                    <td th:text="${employees.daAmount}"></td>
+                    <td th:text="${employees.hraAmount}"></td>
+                    <td th:text="${employees.totalSal}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

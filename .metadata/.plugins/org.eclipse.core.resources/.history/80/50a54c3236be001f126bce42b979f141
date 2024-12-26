@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details Form</title>
+    <link rel="stylesheet" href="styles.css">
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Details Form</h1>
+        <form action="#" method="POST">
+            <label for="empName">Employee Name:</label>
+            <input type="text" id="empName" name="empName" required>
+
+            <label for="empDept">Department:</label>
+            <input type="text" id="empDept" name="empDept" required>
+
+            <label for="empSalary">Salary:</label>
+            <input type="number" id="empSalary" name="empSalary" required>
+
+            <label for="empCompany">Company:</label>
+            <input type="text" id="empCompany" name="empCompany" required>
+
+            <label for="empBonus">Bonus:</label>
+            <input type="number" id="empBonus" name="empBonus" required>
+
+            <label for="empDA">Dearness Allowance (DA):</label>
+            <input type="number" id="empDA" name="empDA" required>
+
+            <label for="empHRA">House Rent Allowance (HRA):</label>
+            <input type="number" id="empHRA" name="empHRA" required>
+
+            <label for="empPF">Provident Fund (PF):</label>
+            <input type="number" id="empPF" name="empPF" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.sathya.springMVC2.EmpEntity;
+
+public class EmpEntity {
+
+}

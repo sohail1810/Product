@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+</head>
+<body>
+    <h1>Employee Information Form</h1>
+
+    <form action="#" method="POST">
+        <label for="employeeId">Employee ID:</label><br>
+        <input type="text" id="employeeId" name="employeeId" required><br><br>
+
+        <label for="employeeName">Employee Name:</label><br>
+        <input type="text" id="employeeName" name="employeeName" required><br><br>
+
+        <label for="employeeSalary">Employee Salary:</label><br>
+        <input type="number" id="employeeSalary" name="employeeSalary" required><br><br>
+
+        <label for="employeeDepartment">Employee Department:</label><br>
+        <input type="text" id="employeeDepartment" name="employeeDepartment" required><br><br>
+
+        <label for="employeeCompany">Employee Company:</label><br>
+        <input type="text" id="employeeCompany" name="employeeCompany" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
+</body>
+</html>

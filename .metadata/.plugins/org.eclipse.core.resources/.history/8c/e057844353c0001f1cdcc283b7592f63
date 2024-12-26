@@ -1,0 +1,72 @@
+package com.sathya.springMVC.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.sathya.springMVC.Entity.ProductEntity;
+import com.sathya.springMVC.ProductModel.ProductModel;
+import com.sathya.springMVC.Service.ProductService;
+
+import ch.qos.logback.core.model.Model;
+
+import org.springframework.web.bind.annotation.RequestParam;
+
+
+
+
+@org.springframework.stereotype.Controller
+public class Controller {
+	@Autowired
+	ProductService productService;
+	@GetMapping("/productform")
+	public String getProductForm() {
+		return "add-product";
+	}
+	@PostMapping("/saveProduct")
+	public String saveProductForm(ProductModel productModel) 
+	{
+		
+		productService.saveProductDetails(productModel);
+		return "Success";
+	}
+	@GetMapping("/getallproducts")
+	public String getAllProducts(org.springframework.ui.Model model)
+	{
+		List<ProductEntity> products=productService.getAllProducts();
+		model.addAttribute("products", products);
+		return "Product-list";
+		
+		
+	}
+	@GetMapping("/getsearchform")
+	public String searchById() {
+		return "Search-Product";
+	}
+	
+	@PostMapping("/searchbyid")
+	public String searchById(@RequestParam Long id,org.springframework.ui.Model model)
+	{
+		ProductEntity products=productService.searchById(id);
+		model.addAttribute("products", products);
+		
+		
+		return "Search-Product";
+	}
+	
+	
+	@GetMapping("/delete/{id}")
+	public String deleteProductById(@PathVariable ("id") Long id )
+	{
+		productService.deleteProductById(id);
+		return "redirect:/getallproducts";
+	}
+	
+	
+	
+
+}

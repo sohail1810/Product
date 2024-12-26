@@ -1,0 +1,18 @@
+package com.sathya.springMVC2.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sathya.springMVC2.EmpRepository.EmpRepository;
+
+@Service
+public class EmpService
+{
+	@Autowired
+	EmpRepository empRepository;
+	
+	
+	
+	
+
+}

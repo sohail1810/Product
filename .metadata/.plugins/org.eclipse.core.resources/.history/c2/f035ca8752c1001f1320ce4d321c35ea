@@ -1,0 +1,6 @@
+package com.sathya.springMVC3.Repository;
+@org.springframework.stereotype.Repository
+public class Repository
+{
+
+}

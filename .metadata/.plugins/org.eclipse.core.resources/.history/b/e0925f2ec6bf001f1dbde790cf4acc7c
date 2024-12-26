@@ -1,0 +1,29 @@
+package com.sathya.springMVC2.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.sathya.springMVC2.EmpModel.EmpModel;
+import com.sathya.springMVC2.Service.EmpService;
+
+
+@org.springframework.stereotype.Controller
+public class Controller {
+	@Autowired
+	EmpService empService;
+	@GetMapping("/employeeform")
+	public String getEmployeeForm()
+	{
+		return "add-Emp";
+	}
+	@PostMapping("/saveEmployee")
+	public String saveEmployeeForm(EmpModel empModel) {
+	
+		empService.saveEmpDetails(empModel);
+		return "Success";
+	}
+	
+
+}

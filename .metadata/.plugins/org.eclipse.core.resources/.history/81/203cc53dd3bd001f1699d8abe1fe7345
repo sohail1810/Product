@@ -1,0 +1,5 @@
+package com.sathya.springMVC.Service;
+
+public class ProductService {
+
+}

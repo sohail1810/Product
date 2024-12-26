@@ -1,0 +1,48 @@
+package com.sathya.springMVC2.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sathya.springMVC2.EmpEntity.EmpEntity;
+import com.sathya.springMVC2.EmpModel.EmpModel;
+import com.sathya.springMVC2.EmpRepository.EmpRepository;
+
+@Service
+public class EmpService {
+	@Autowired
+	EmpRepository empRepository;
+	private double pfAmount;
+	private double bonusAmount;
+	public void saveEmpDetails(EmpModel empModel)
+	{
+		double bounsAmount;
+		bonusAmount=empModel.getSal()*empModel.getBonus();
+		double daAmount;
+		daAmount=empModel.getSal()*empModel.getDa();
+		double hraAmount;
+		hraAmount=empModel.getSal()*empModel.getHra();
+		double totalSalary;
+		totalSalary=empModel.getSal()+daAmount+hraAmount-pfAmount;
+		double pfAmount;
+		pfAmount=empModel.getSal()*empModel.getPf();
+		pfAmount=empModel.getSal()*empModel.getPf();
+		EmpEntity empEntity=new EmpEntity();
+		empEntity.setName(empModel.getName());
+		empEntity.setSal(empModel.getSal());
+		empEntity.setDept(empModel.getDept());
+		empEntity.setBonus(empModel.getBonus());
+		empEntity.setComp(empModel.getComp());
+		empEntity.setDa(empModel.getDa());
+		empEntity.setHra(empModel.getHra());
+		empEntity.setDaAmount(daAmount);
+		empEntity.setHraAmount(hraAmount);
+		empEntity.setTotalSalary(totalSalary);
+		empRepository.save(empEntity);
+		
+		
+		
+	}
+	
+	
+
+}

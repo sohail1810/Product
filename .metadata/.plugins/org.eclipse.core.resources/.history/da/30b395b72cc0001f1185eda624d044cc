@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details Form</title>
+   
+  
+    
+</head>
+<body>
+    <div >
+        <h1>Employee Details Form</h1>
+        <form th:action="/saveEmployee" method="post">
+        
+            <label for="empName"> Name:</label>
+            <input type="text" id="empName" name="name" required><br><br>
+            
+            <label for="empDept">Department:</label>
+            <input type="text" id="empDept" name="dept" required><br><br>
+
+            <label for="empSalary">Salary:</label>
+            <input type="number" id="empSalary" name="sal" required><br><br>
+
+            <label for="empCompany">Company:</label>
+            <input type="text" id="empCompany" name="comp" required><br><br>
+
+            <label for="empBonus">Bonus:</label>
+            <input type="number" id="empBonus" name="bonus" required><br><br>
+
+            <label for="empDA">Dearness Allowance (DA):</label>
+            <input type="number" id="empDA" name="da" required><br><br>
+
+            <label for="empHRA">House Rent Allowance (HRA):</label>
+            <input type="number" id="empHRA" name="hra" required><br><br>
+
+            <label for="empPF">Provident Fund (PF):</label>
+            <input type="number" id="empPF" name="pf" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

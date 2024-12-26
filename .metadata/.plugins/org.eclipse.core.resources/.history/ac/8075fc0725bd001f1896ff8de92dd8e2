@@ -1,0 +1,11 @@
+package com.sathya.springMVC.EmployeeModel;
+
+public class EmpModel {
+	private int empId;
+	private String empName;
+	private double empSal;
+	private String empDept;
+	private String empCompany;
+
+
+}

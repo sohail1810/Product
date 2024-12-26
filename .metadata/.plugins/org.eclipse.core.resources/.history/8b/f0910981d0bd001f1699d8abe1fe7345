@@ -1,0 +1,5 @@
+package com.sathya.springMVC.Repository;
+
+public class ProductRepository {
+
+}

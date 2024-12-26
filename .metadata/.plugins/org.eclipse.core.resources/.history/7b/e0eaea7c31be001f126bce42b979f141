@@ -1,0 +1,25 @@
+package com.sathya.springMVC2.Controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.sathya.springMVC2.EmpModel.EmpModel;
+
+
+@org.springframework.stereotype.Controller
+public class Controller {
+	@GetMapping("/employeeform")
+	public String getEmployeeForm()
+	{
+		return "add-Emp";
+	}
+	@PostMapping("/saveEmployee")
+	public String saveEmployeeForm(EmpModel empModel) {
+	
+		
+		return "Success";
+	}
+	
+
+}

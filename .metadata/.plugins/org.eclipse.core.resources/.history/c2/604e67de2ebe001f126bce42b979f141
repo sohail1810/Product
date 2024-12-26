@@ -1,0 +1,5 @@
+package com.sathya.springMVC2.EmpRepository;
+
+public class EmpRepository {
+
+}

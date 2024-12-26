@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .form-group input[type="number"]::-webkit-outer-spin-button,
+        .form-group input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .form-group button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .form-group button:active {
+            background-color: #388e3c;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Employee Information Form</h2>
+        <form th:action="/saveemployee" method="post">
+            <div class="form-group">
+                <label for="empName">Employee Name</label>
+                <input type="text" id="empName" name="empName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="empDept">Employee Department</label>
+                <input type="text" id="empDept" name="empDept" placeholder="Enter your department" required>
+            </div>
+            <div class="form-group">
+                <label for="empCompany">Employee Company</label>
+                <input type="text" id="empCompany" name="empComp" placeholder="Enter your company name" required>
+            </div>
+            <div class="form-group">
+                <label for="empSalary">Employee Salary</label>
+                <input type="number" id="empSalary" name="empSal" placeholder="Enter your salary" required>
+            </div>
+            <div class="form-group">
+                <label for="empBonus">Employee Bonus</label>
+                <input type="number" id="empBonus" name="empBonus" placeholder="Enter your bonus" required>
+            </div>
+            <div class="form-group">
+                <label for="empDA">Employee DA (Dearness Allowance)</label>
+                <input type="number" id="empDA" name="empDa" placeholder="Enter your DA" required>
+            </div>
+            <div class="form-group">
+                <label for="empHRA">Employee HRA (House Rent Allowance)</label>
+                <input type="number" id="empHRA" name="empHra" placeholder="Enter your HRA" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
